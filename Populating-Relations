@@ -1,0 +1,72 @@
+insert into Cart values('crt1012');
+insert into Customer values('cid101','XYZM4567','Aarav','H-234','560078',9876543210,
+'crt1012');
+insert into Seller values('sid101','67890','Priya','Mumbai');
+insert into Product values('pid1002','saree','blue','S','F',15,1500,15,'sid101');
+insert into Seller_Phone_num values('9876543210','sid101');
+insert into Cart_item values(2,'1999-10-11','crt1012','pid1002','N');
+insert into Payment values('pmt1002','1999-10-11','online','cid101','crt1012',NULL);
+insert into Cart values('crt1013');
+insert into Customer values('cid102','PQRS7890','Amit','G-890','411027',9898765432,
+'crt1013');
+insert into Seller values('sid102','54321','Neha','Pune');
+insert into Product values('pid1003','kurta','green','L','M',10,1200,20,'sid102');
+insert into Seller_Phone_num values('9898765432','sid102');
+insert into Cart_item values(1,'1999-10-12','crt1013','pid1003','N');
+insert into Payment values('pmt1003','1999-10-12','online','cid102','crt1013',NULL);
+insert into Cart values('crt1014');
+insert into Customer
+values('cid103','LMNO9876','Ananya','A-456','700016',9988776655, 'crt1014');
+insert into Seller values('sid103','43210','Rahul','Kolkata');
+insert into Product values('pid1004','shirt','yellow','XL','M',12,800,10,'sid103');
+insert into Seller_Phone_num values('9988776655','sid103');
+insert into Cart_item values(3,'1999-10-13','crt1014','pid1004','N');
+insert into Payment values('pmt1004','1999-10-13','online','cid103','crt1014',NULL);
+insert into Cart values('crt1015');
+insert into Customer values('cid104','STUV2345','Vidya','B-678','600040',9876543210,
+'crt1015');
+insert into Seller values('sid104','98765','Arun','Chennai');
+insert into Product values('pid1005','dress','pink','M','F',10,2000,25,'sid104');
+insert into Seller_Phone_num values('9876543210','sid104');
+insert into Cart_item values(2,'1999-10-14','crt1015','pid1005','N');
+insert into Payment values('pmt1005','1999-10-14','online','cid104','crt1015',NULL);
+insert into Cart values('crt1016');
+insert into Customer values('cid105','UVWX4567','Sakshi','E-123','110001',9876543210,
+'crt1016');
+insert into Seller values('sid105','87654','Amitabh','Delhi');
+insert into Product values('pid1006','t-shirt','black','L','M',10,600,30,'sid105');
+insert into Seller_Phone_num values('9876543210','sid105');
+insert into Cart_item values(1,'1999-10-15','crt1016','pid1006','N');
+insert into Payment values('pmt1006','1999-10-15','online','cid105','crt1016',NULL);
+insert into Cart values('crt1017');
+insert into Customer values('cid106','WXYZ3456','Riya','F-789','411057',9876543210,
+'crt1017');
+insert into Seller values('sid106','76543','Aditya','Pune');
+insert into Product values('pid1007','shoes','brown','8','M',15,2500,10,'sid106');
+insert into Seller_Phone_num values('9876543210','sid106');
+insert into Cart_item values(2,'1999-10-16','crt1017','pid1007','N');
+insert into Payment values('pmt1007','1999-10-16','online','cid106','crt1017',NULL);
+insert into Cart values('crt1018');
+insert into Customer values('cid107','ABCD5678','Sneha','G-345','500081',9876543210,
+'crt1018');
+insert into Seller values('sid107','65432','Varun','Hyderabad');
+insert into Product values('pid1008','watch','silver','M','M',10,3000,15,'sid107');
+insert into Seller_Phone_num values('9876543210','sid107');
+insert into Cart_item values(1,'1999-10-17','crt1018','pid1008','N');
+insert into Payment values('pmt1008','1999-10-17','online','cid107','crt1018',NULL);
+insert into Cart values('crt1019');
+insert into Customer values('cid108','EFGH6789','Rohan','C-123','560102',9876543210,
+'crt1019');
+insert into Seller values('sid108','87654','Akansha','Bangalore');
+insert into Product values('pid1009','bag','purple','M','F',10,1000,20,'sid108');
+insert into Seller_Phone_num values('9876543210','sid108');
+insert into Cart_item values(2,'1999-10-18','crt1019','pid1009','N');
+insert into Payment values('pmt1009','1999-10-18','online','cid108','crt1019',NULL);
+insert into Cart values('crt1020');
+insert into Customer values('cid109','IJKL7890','Shreya','D-567','400022',9876543210,
+'crt1020');
+insert into Seller values('sid109','98765','Sahil','Mumbai');
+insert into Product values('pid1010','earrings','gold','M','F',20,5000,10,'sid109');
+insert into Seller_Phone_num values('9876543210','sid109');
+insert into Cart_item values(1,'1999-10-19','crt1020','pid1010','N');
+insert into Payment values('pmt1010','1999-10-19','online','cid109','crt1020',NULL);
