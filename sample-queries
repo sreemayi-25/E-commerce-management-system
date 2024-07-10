@@ -1,0 +1,66 @@
+1. if a customer wants to see order history
+select product_id,Quantity_wished 
+from Cart_item 
+where (purchased='N' and Cart_id in (select Cart_id from customer where Customer_id='cid101'));
+
+2. Customer wants to see filtered products on the basis of size,gender,type
+select product_id, color, cost, seller_id 
+from product 
+where (type='saree' and p_size='S' and gender='F' and quantity>0);
+
+3. if a seller stops selling his product    
+delete from seller 
+where seller_id = 'sid100';
+update product set quantity = 00 where seller_id is NULL;
+
+4. If admin want to see what are the product purchased on the particular date
+select product_id 
+from cart_item 
+where (purchased='N' and date_added='1999-10-12');
+
+5. How much product sold on the particular date
+select count(product_id) count_pid,date_added 
+from Cart_item 
+where purchased='N'  
+group by(date_added);
+
+6. Retrieve all customers along with their names and addresses::
+SELECT Customer_id, Name, Address
+FROM Customer;
+
+7. Retrieve all sellers and their corresponding phone numbers:
+SELECT Seller_id, Phone_num
+FROM Seller_Phone_num;
+
+8. Retrieve all products along with their types and colors:
+SELECT Product_id, Type, Color
+FROM Product;
+
+9.Retrieve the total amount of each payment along with the corresponding customer information:
+SELECT p.payment_id, p.total_amount, c.Name AS Customer_Name, c.Address AS Customer_Address
+FROM Payment p
+JOIN Customer c ON p.Customer_id = c.Customer_id;
+
+10. select all blue products
+SELECT *
+FROM Product
+WHERE Color = 'blue';
+
+11.Retrieve all cart items for a specific customer
+SELECT * FROM Cart_item
+WHERE Cart_id IN (SELECT Cart_id FROM Customer WHERE Customer_id = 'cid101');
+
+12.Retrieve the details of all products along with their seller information:
+SELECT p.Product_id, p.Type, p.Color, p.P_Size, p.Gender, p.Commission, p.Cost, p.Quantity, s.Name AS Seller_Name, s.Address AS Seller_Address
+FROM Product p
+JOIN Seller s ON p.Seller_id = s.Seller_id;
+
+13. Retrieve the details of all cart items along with their corresponding product and cart information:
+SELECT ci.Cart_id, ci.Product_id, ci.Quantity_wished, ci.Date_Added, ci.purchased, p.Type AS Product_Type, p.Color AS Product_Color, p.P_Size AS Product_Size, p.Gender AS Product_Gender
+FROM Cart_item ci
+JOIN Product p ON ci.Product_id = p.Product_id;
+
+14.Retrieve the details of all payments along with the corresponding customer and cart information:
+SELECT py.payment_id, py.payment_date, py.Payment_type, py.total_amount, c.Name AS Customer_Name, c.Address AS Customer_Address, c.Pincode AS Customer_Pincode, c.Phone_number_s AS Customer_Phone_Number, py.Cart_id
+FROM Payment py
+JOIN Customer c ON py.Customer_id = c.Customer_id;
